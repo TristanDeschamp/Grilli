@@ -4,199 +4,189 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- 
-		- Balise méta principales
-	-->
+
+	<!-- Balise méta principales-->
 	<title>Grilli - Cuisine Exquise et Délicieuse</title>
 	<meta name="title" content="Grilli - Cuisine et Délicieuse">
 	<meta name="description" content="Ceci est un site HTML de restaurant réalisé par Tristan Deschamp">
-	<!-- 
-		- favicon
-	-->
+
+	<!-- favicon -->
 	<link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
-	<!-- 
-		- Lien vers Google Fonts
-	-->
+
+	<!-- Lien vers Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
-	<!-- 
-		- Lien CSS personnalisé
-	-->
+
+	<!-- Lien CSS personnalisé -->
 	<link rel="stylesheet" href="./assets/css/style.css">
-	<!-- 
-		- Préchargement des images
-	-->
-	<link rel="preload" as="image" href="./assets/images/hero-slider-1.jpg">
-	<link rel="preload" as="image" href="./assets/images/hero-slider-2.jpg">
-	<link rel="preload" as="image" href="./assets/images/hero-slider-3.jpg">
+
+	<!-- Préchargement des images -->
+	<link rel="preload" as="image" href="./assets/images/hero-slider-1.webp">
+	<link rel="preload" as="image" href="./assets/images/hero-slider-2.webp">
+	<link rel="preload" as="image" href="./assets/images/hero-slider-3.webp">
 </head>
+
 <body id="top">
 
-	<!-- 
-	-#Préchargement
-	-->
+	<!-- Préchargement -->
 	<div class="preload" data-preaload>
 		<div class="circle"></div>
 		<p class="text">Grilli</p>
 	</div>
 
-	<!-- 
-	-#Barre supérieure
-	-->
-	<div class="topbar">
+	<!-- Barre supérieure -->
+	<div class="topbar" aria-label="Informations de contact principales">
 		<div class="container">
-			<address class="topbar-item">
-				<div class="icon">
-					<ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+			<!-- Adresse -->
+			<address class="topbar-item" aria-label="Adresse du restaurant">
+				<div class="icon" aria-hidden="true">
+					<ion-icon name="location-outline"></ion-icon>
 				</div>
 				<span class="span">
 					Rue du Restaurant, Cité Délicieuse, Londres 9578, Royaume-Uni
 				</span>
 			</address>
 
-			<div class="separator"></div>
+			<div class="separator" aria-hidden="true"></div>
 
-			<div class="topbar-item item-2">
-				<div class="icon">
-					<ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+			<div class="topbar-item item-2" aria-label="Horaires d'ouverture">
+				<div class="icon" aria-hidden="true">
+					<ion-icon name="time-outline"></ion-icon>
 				</div>
 
 				<span class="span">Tous les jours : 8h00 à 22h00</span>
 			</div>
 
-			<a href="tel:+11234567890" class="topbar-item link">
-				<div class="icon">
-					<ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+			<a href="tel:+11234567890" class="topbar-item link" aria-label="Appeler le restaurant">
+				<div class="icon" aria-hidden="true">
+					<ion-icon name="call-outline"></ion-icon>
 				</div>
 
 				<span class="span">+1 123 456 7890</span>
 			</a>
 
-			<div class="separator"></div>
+			<div class="separator" aria-hidden="true"></div>
 
-			<a href="mailto:reservation@grilli.com" class="topbar-item link">
-				<div class="icon">
-					<ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+			<!-- Email -->
+			<a href="mailto:reservation@grilli.com" class="topbar-item link" aria-label="Envoyer un email de réservation">
+				<div class="icon" aria-hidden="true">
+					<ion-icon name="mail-outline"></ion-icon>
 				</div>
 
 				<span class="span">reservation@grilli.com</span>
 			</a>
 		</div>
 	</div>
-	<!-- 
-	-#Header
-	-->
+
+	<!-- Header -->
 	<header class="header" data-header>
 		<div class="container">
-			<a href="#" class="logo">
-				<img src="./assets/images/logo.svg" width="160" height="50" alt="Grilli - Home">
+
+			<!-- Logo principal, lien vers l'accueil -->
+			<a href="#home" class="logo" aria-label="Accueil Grilli">
+				<img src="./assets/images/logo.svg" width="160" height="50" alt="Logo Grilli Accueil">
 			</a>
 
-			<nav class="navbar" data-navbar>
+			<!-- Menu de navigation principal -->
+			<nav class="navbar" data-navbar aria-label="Navigation principale">
 
-				<button class="close-btn" aria-label="close menu" data-nav-toggler>
+				<button class="close-btn" aria-label="Fermer le menu" data-nav-toggler>
 					<ion-icon name="close-outline" aria-hidden="true"></ion-icon>
 				</button>
 
-				<a href="#" class="logo">
-					<img src="./assets/images/logo.svg" width="160" height="50" alt="Grilli - Home">
+				<!-- Logo secondaire dans le menu mobile -->
+				<a href="#home" class="logo" aria-label="Accueil Grilli">
+					<img src="./assets/images/logo.svg" width="160" height="50" alt="Logo Grilli Accueil">
 				</a>
 
 				<ul class="navbar-list">
 					<li class="navbar-item">
-						<a href="#home" class="navbar-link hover-underline active">
-						<div class="separator"></div>
-
+						<a href="#home" class="navbar-link hover-underline active" aria-current="page">
+						<div class="separator" aria-hidden="true"></div>
 						<span class="span">Accueil</span>
 						</a>
 					</li>
-
 					<li class="navbar-item">
 						<a href="#menu" class="navbar-link hover-underline">
-						<div class="separator"></div>
-
+						<div class="separator" aria-hidden="true"></div>
 						<span class="span">Menus</span>
 						</a>
 					</li>
-
 					<li class="navbar-item">
 						<a href="#about" class="navbar-link hover-underline">
-						<div class="separator"></div>
-
+						<div class="separator" aria-hidden="true"></div>
 						<span class="span">À propos</span>
 						</a>
 					</li>
-
 					<li class="navbar-item">
-						<a href="#" class="navbar-link hover-underline">
-						<div class="separator"></div>
-
+						<a href="#chefs" class="navbar-link hover-underline">
+						<div class="separator" aria-hidden="true"></div>
 						<span class="span">Nos Chefs</span>
 						</a>
 					</li>
-
 					<li class="navbar-item">
-						<a href="#" class="navbar-link hover-underline">
-						<div class="separator"></div>
-
+						<a href="#contact" class="navbar-link hover-underline">
+						<div class="separator" aria-hidden="true"></div>
 						<span class="span">Contact</span>
 						</a>
 					</li>
 				</ul>
 
-				<div class="text-center">
+				<div class="text-center" aria-label="Informations pratiques du restaurant">
 					<p class="headline-1 navbar-title">Nous rendre visite</p>
 
-					<address class="body-4">
+					<address class="body-4" aria-label="Adresse du restaurant">
 						Rue du Restaurant, Cité Délicieuse, <br>
 						Londres 9578, Royaume-Uni
 					</address>
 
-					<p class="body-4 navbar-text">Ouvert : 9h30 - 14h30</p>
+					<p class="body-4 navbar-text" aria-label="Horaire d'ouverture">Ouvert : 9h30 - 14h30</p>
 
-					<a href="mailto:reservation@grilli.com" class="body-4 sidebar-link">reservation@grilli.com</a>
+					<a href="mailto:reservation@grilli.com" class="body-4 sidebar-link" aria-label="Envoyer un email à Grilli">reservation@grilli.com</a>
 
-					<div class="separator"></div>
+					<div class="separator" aria-hidden="true"></div>
 
 					<p class="contact-label">Demande de réservation</p>
 
-					<a href="tel:+88123123456" class="body-1 contact-number hover-underline">
+					<a href="tel:+88123123456" class="body-1 contact-number hover-underline" aria-label="Appeler pour réserver">
 						+88-123-123456
 					</a>
 				</div>
 			</nav>
 
-			<a href="#" class="btn btn-secondary">
+			<!-- Bouton de réserveation rapide -->
+			<a href="#" class="btn btn-secondary" aria-label="Réserver une table">
 				<span class="text text-1">Réserver une table</span>
 				<span class="text text-2" aria-hidden="true">Réserver une table</span>
 			</a>
 
-			<button class="nav-open-btn" aria-label="ouvrir le menu" data-nav-toggler>
+			<!-- Bouton d'ouverture du menu (mobile) -->
+			<button class="nav-open-btn" aria-label="Ouvrir le menu" data-nav-toggler>
 				<span class="line line-1"></span>
 				<span class="line line-2"></span>
 				<span class="line line-3"></span>
 			</button>
 
-			<div class="overlay" data-nav-toggler data-overlay></div>
+			<div class="overlay" data-nav-toggler data-overlay tabindex="-1" aria-hidden="true"></div>
 		</div>
 	</header>
 
+	<!-- Début du main -->
 	<main>
 		<article>
-			<!-- 
-			-#Hero
-			-->
-			<section class="hero text-center" aria-label="accueil" id="home">
-				<ul class="hero-slider" data-hero-slider>
-					<li class="slider-item active" data-hero-slider-item>
+			<!-- Section Hero Début -->
+			<section class="hero text-center" aria-labelledby="hero-title" id="home">
+				<ul class="hero-slider" data-hero-slider aria-label="Diaporama accueil">
+					<!-- Slide 1 -->
+					<li class="slider-item active" data-hero-slider-item aria-roledescription="slide" aria-label="1 sur 3">
 						<div class="slider-bg">
-							<img src="./assets/images/hero-slider-1.jpg" width="1880" height="950" alt="" class="img-cover">
+							<img src="./assets/images/hero-slider-1.webp" width="1880" height="950" alt="Photo de plat" class="img-cover">
 						</div>
 
 						<p class="label-2 section-subtitle slider-reveal">Tradition & Hygiène</p>
 
-						<h1 class="display-1 hero-title slider-reveal">
+						<h1 class="display-1 hero-title slider-reveal" id="hero-title">
 							Pour l'amour de la <br>
 							cuisine délicieuse
 						</h1>
@@ -205,17 +195,16 @@
 							Venez en famille et savourez la joie d'une cuisine savoureuse
 						</p>
 
-						<a href="#" class="btn btn-primary slider-reveal">
+						<a href="#menu" class="btn btn-primary slider-reveal" aria-label="Voir notre menu">
 							<span class="text text-1">Voir notre menu</span>
-
 							<span class="text text-2" aria-hidden="true">Voir notre menu</span>
 						</a>
 					</li>
 
-					<li class="slider-item" data-hero-slider-item>
-
+					<!-- Slide 2 -->
+					<li class="slider-item" data-hero-slider-item aria-roledescription="slide" aria-label="2 sur 3">
 						<div class="slider-bg">
-							<img src="./assets/images/hero-slider-2.jpg" width="1880" height="950" alt="" class="img-cover">
+							<img src="./assets/images/hero-slider-2.webp" width="1880" height="950" alt="Photo de plat" class="img-cover">
 						</div>
 
 						<p class="label-2 section-subtitle slider-reveal">une expérience exquise</p>
@@ -229,17 +218,16 @@
 							Venez en famille et savourez la joie d'une cuisine savoureuse
 						</p>
 
-						<a href="#" class="btn btn-primary slider-reveal">
+						<a href="#menu" class="btn btn-primary slider-reveal" aria-label="Voir notre menu">
 							<span class="text text-1">Voir notre menu</span>
-
 							<span class="text text-2" aria-hidden="true">Voir notre menu</span>
 						</a>
 					</li>
 
-					<li class="slider-item" data-hero-slider-item>
-
+					<!-- Slide 3 -->
+					<li class="slider-item" data-hero-slider-item aria-roledescription="slide" aria-label="3 sur 3">
 						<div class="slider-bg">
-							<img src="./assets/images/hero-slider-3.jpg" width="1880" height="950" alt="" class="img-cover">
+							<img src="./assets/images/hero-slider-3.webp" width="1880" height="950" alt="Photo de plat" class="img-cover">
 						</div>
 
 						<p class="label-2 section-subtitle slider-reveal">incroyable & délicieux</p>
@@ -253,100 +241,101 @@
 							Venez en famille et savourez la joie d'une cuisine savoureuse
 						</p>
 
-						<a href="#" class="btn btn-primary slider-reveal">
+						<a href="#menu" class="btn btn-primary slider-reveal" aria-label="Voir notre menu">
 							<span class="text text-1">Voir notre menu</span>
-
 							<span class="text text-2" aria-hidden="true">Voir notre menu</span>
 						</a>
 					</li>
 				</ul>
 
-				<button class="slider-btn prev" aria-label="diapositive précédente" data-prev-btn>
-					<ion-icon name="chevron-back"></ion-icon>
+				<!-- Contrôles du slider -->
+				<button class="slider-btn prev" aria-label="Diapositive précédente" data-prev-btn>
+					<ion-icon name="chevron-back" aria-hidden="true"></ion-icon>
 				</button>
 
-				<button class="slider-btn next" aria-label="diapositive suivante" data-next-btn>
-					<ion-icon name="chevron-forward"></ion-icon>
+				<button class="slider-btn next" aria-label="Diapositive suivante" data-next-btn>
+					<ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
 				</button>
 
-				<a href="#" class="hero-btn has-after">
-					<img src="./assets/images/hero-icon.png" width="48" height="48" alt="booking icon">
-
+				<!-- Call to action : réserver une table -->
+				<a href="#reservation" class="hero-btn has-after" aria-label="Réserver une table">
+					<img src="./assets/images/hero-icon.webp" width="48" height="48" alt="Icône réservation" loading="lazy">
 					<span class="label-2 text-center span">Réserver une table</span>
 				</a>
 			</section>
+			<!-- Section Hero Fin -->
 
-			<!-- 
-			- #Services
-			-->
-			<section class="section service bg-black-10 text-center" aria-label="service">
+			<!-- Section Services Début -->
+			<section class="section service bg-black-10 text-center" aria-labelledby="services-title">
 				<div class="container">
-					<p class="section-subtitle label-2">Des saveurs royales</p>
-					<h2 class="headline-1 section-title">Nous offrons l'excellence</h2>
+
+					<p class="section-subtitle label-2" id="services-subtitle">Des saveurs royales</p>
+					<h2 class="headline-1 section-title" id="services-title">Nous offrons l'excellence</h2>
 					<p class="section-text">
 						Le Lorem Ipsum est tout simplement un faux texte utilisé dans la composition et la mise en page avant impression. 
 						Il est devenu le faux texte standard de l'industrie.
 					</p>
-					<ul class="grid-list">
+					<ul class="grid-list" aria-label="Liste des services">
 						<li>
-							<div class="service-card">
-								<a href="#" class="has-before hover:shine">
+							<div class="service-card" aria-label="Petit-déjeuner">
+								<a href="#" class="has-before hover:shine" aria-label="Voir le service Petit-déjeuner">
 									<figure class="card-banner img-holder" style="--width: 285; --height: 336;">
-										<img src="./assets/images/service-1.jpg" width="285" height="336" loading="lazy" alt="Breakfast"
+										<img src="./assets/images/service-1.webp" width="285" height="336" loading="lazy" alt="Image de petit-déjeuner"
 										class="img-cover">
 									</figure>
 								</a>
 								<div class="card-content">
 									<h3 class="title-4 card-title">
-										<a href="#">Petit-déjeuner</a>
+										<a href="#" aria-label="Voir le menu Petit-déjeuner">Petit-déjeuner</a>
 									</h3>
-									<a href="#" class="btn-text hover-underline label-2">Voir le menu</a>
+									<a href="#" class="btn-text hover-underline label-2" aria-label="Voir le menu Petit-déjeuner">Voir le menu</a>
 								</div>
 							</div>
 						</li>
 						<li>
-							<div class="service-card">
-								<a href="#" class="has-before hover:shine">
+							<div class="service-card" aria-label="Entrées">
+								<a href="#" class="has-before hover:shine" aria-label="Voir le service Entrées">
 									<figure class="card-banner img-holder" style="--width: 285; --height: 336;">
-										<img src="./assets/images/service-2.jpg" width="285" height="336" loading="lazy" alt="Appetizers"
+										<img src="./assets/images/service-2.webp" width="285" height="336" loading="lazy" alt="Image d'une entrée"
 											class="img-cover">
 									</figure>
 								</a>
 								<div class="card-content">
 									<h3 class="title-4 card-title">
-										<a href="#">Entrées</a>
+										<a href="#" aria-label="Voir le menu Entrées">Entrées</a>
 									</h3>
-									<a href="#" class="btn-text hover-underline label-2">Voir le menu</a>
+									<a href="#" class="btn-text hover-underline label-2" aria-label="Voir le menu Entrées">Voir le menu</a>
 								</div>
 							</div>
 						</li>
 						<li>
-							<div class="service-card">
-								<a href="#" class="has-before hover:shine">
+							<div class="service-card" aria-label="Boissons">
+								<a href="#" class="has-before hover:shine" aria-label="Voir le service Boissons">
 									<figure class="card-banner img-holder" style="--width: 285; --height: 336;">
-										<img src="./assets/images/service-3.jpg" width="285" height="336" loading="lazy" alt="Drinks"
+										<img src="./assets/images/service-3.webp" width="285" height="336" loading="lazy" alt="Image d'une boisson"
 											class="img-cover">
 									</figure>
 								</a>
 								<div class="card-content">
 									<h3 class="title-4 card-title">
-										<a href="#">Boissons</a>
+										<a href="#" aria-label="Voir le menu Boissons">Boissons</a>
 									</h3>
-									<a href="#" class="btn-text hover-underline label-2">Voir le menu</a>
+									<a href="#" class="btn-text hover-underline label-2" aria-label="Voir le menu Boissons">Voir le menu</a>
 								</div>
 							</div>
 						</li>
 					</ul>
-					<img src="./assets/images/shape-1.png" width="246" height="412" loading="lazy" alt="forme décorative"
+
+					<!-- Image décoratives -->
+					<img src="./assets/images/shape-1.webp" width="246" height="412" loading="lazy" alt="forme décorative" aria-hidden="true"
 						class="shape shape-1 move-anim">
-					<img src="./assets/images/shape-2.png" width="343" height="345" loading="lazy" alt="forme décorative"
+					<img src="./assets/images/shape-2.webp" width="343" height="345" loading="lazy" alt="forme décorative" aria-hidden="true"
 						class="shape shape-2 move-anim">
 				</div>
 			</section>
+			<!-- Section Services Fin -->
 
-			<!-- 
-			- #A propos
-			-->
+			<!-- Section A propos Début -->
 			<section class="section about text-center" aria-labelledby="about-label" id="about">
 				<div class="container">
 					<div class="about-content">
@@ -359,43 +348,43 @@
 							mais aussi au passage à l’ère numérique.
 						</p>
 						<div class="contact-label">Réserver par téléphone</div>
-						<a href="tel:+804001234567" class="body-1 contact-number hover-underline">+80 (400) 123 4567</a>
-						<a href="#" class="btn btn-primary">
+						<a href="tel:+804001234567" class="body-1 contact-number hover-underline" aria-label="Réserver une table par téléphone, numéro : +80 (400) 123 4567">+80 (400) 123 4567</a>
+						<a href="#" class="btn btn-primary" aria-label="En savoir plus sur Grilli">
 							<span class="text text-1">En savoir plus</span>
 							<span class="text text-2" aria-hidden="true">En savoir plus</span>
 						</a>
 					</div>
-					<figure class="about-banner">
-						<img src="./assets/images/about-banner.jpg" width="570" height="570" loading="lazy" alt="bannière à propos"
+					<figure class="about-banner" aria-label="Photos d'un chef de Grilli">
+						<img src="./assets/images/about-banner.webp" width="570" height="570" loading="lazy" alt="Photo d'un chef"
 						class="w-100" data-parallax-item data-parallax-speed="1">
 						<div class="abs-img abs-img-1 has-before" data-parallax-item data-parallax-speed="1.75">
-							<img src="./assets/images/about-abs-image.jpg" width="285" height="285" loading="lazy" alt=""
+							<img src="./assets/images/about-abs-image.webp" width="285" height="285" loading="lazy" alt="Détail décoratif intérieur du restaurant"
 								class="w-100">
 						</div>
 						<div class="abs-img abs-img-2 has-before">
-							<img src="./assets/images/badge-2.png" width="133" height="134" loading="lazy" alt="">
+							<img src="./assets/images/badge-2.webp" width="133" height="134" loading="lazy" alt="Badge qualité du restaurant">
 						</div>
 					</figure>
-					<img src="./assets/images/shape-3.png" width="197" height="194" loading="lazy" alt="" class="shape">
+					<img src="./assets/images/shape-3.webp" width="197" height="194" loading="lazy" alt="Forme décorative" class="shape" aria-hidden="true">
 				</div>
 			</section>
+			<!-- Section A propos Fin -->
 
-			<!-- 
-			- #Plat spécial
-			-->
+			<!-- Section Plat Spécial Début -->
 			<section class="special-dish text-center" aria-labelledby="dish-label">
 
 			<div class="special-dish-banner">
-				<img src="./assets/images/special-dish-banner.jpg" width="940" height="900" loading="lazy" alt="special dish"
+				<img src="./assets/images/special-dish-banner.webp" width="940" height="900" loading="lazy" alt="Plat spécial du restaurant : tortellinis au homard servis avec sauce crémeuse"
 					class="img-cover">
 			</div>
 
 			<div class="special-dish-content bg-black-10">
 				<div class="container">
 
-					<img src="./assets/images/badge-1.png" width="28" height="41" loading="lazy" alt="badge" class="abs-img">
+					<!-- Badge décoratif, aria-hidden -->
+					<img src="./assets/images/badge-1.webp" width="28" height="41" loading="lazy" alt="Badge décoratif" aria-hidden="true" class="abs-img">
 
-					<p class="section-subtitle label-2">Plat Spécial</p>
+					<p class="section-subtitle label-2" id="dish-label">Plat Spécial</p>
 
 					<h2 class="headline-1 section-title">Tortellinis au homard</h2>
 
@@ -404,661 +393,542 @@
 					Il est devenu le texte standard de remplissage depuis qu’un imprimeur inconnu a utilisé une collection de caractères typographiques.
 					</p>
 
-					<div class="wrapper">
-					<del class="del body-3">40,00 €</del>
-
-					<span class="span body-1">20,00 €</span>
+					<div class="wrapper" aria-label="Prix du plat spécial">
+					<del class="del body-3" aria-label="Prix initial">40,00 €</del>
+					<span class="span body-1" aria-label="Prix promotionnel">20,00 €</span>
 					</div>
 
-					<a href="#" class="btn btn-primary">
+					<a href="#menu" class="btn btn-primary" aria-label="Voir tout le menu">
 					<span class="text text-1">Voir tout le menu</span>
-
 					<span class="text text-2" aria-hidden="true">Voir tout le menu</span>
 					</a>
-
 				</div>
 			</div>
 
-			<img src="./assets/images/shape-4.png" width="179" height="359" loading="lazy" alt="" class="shape shape-1">
-
-			<img src="./assets/images/shape-9.png" width="351" height="462" loading="lazy" alt="" class="shape shape-2">
-
+			<!-- Images décoratives -->
+			<img src="./assets/images/shape-4.webp" width="179" height="359" loading="lazy" alt="Image décorative" class="shape shape-1">
+			<img src="./assets/images/shape-9.webp" width="351" height="462" loading="lazy" alt="Image décorative" class="shape shape-2">
 			</section>
+			<!-- Section Plat Spécial Fin -->
 
-			<!-- 
-			- #Menu
-			-->
-			<section class="section menu" aria-label="menu-label" id="menu">
-			<div class="container">
+			<!-- Section Menu Début -->
+			<section class="section menu" aria-labelledby="menu-title" id="menu">
+				<div class="container">
 
-				<p class="section-subtitle text-center label-2">Sélection spéciale</p>
+					<p class="section-subtitle text-center label-2" id="menu-subtitle">Sélection spéciale</p>
+					<h2 class="headline-1 section-title text-center" id="menu-title">Menu délicieux</h2>
 
-				<h2 class="headline-1 section-title text-center">Menu délicieux</h2>
+					<ul class="grid-list" aria-label="Liste des plats du menu">
+						<!-- Salade grecque -->
+						<li>
+							<article class="menu-card hover:card" aria-label="Salade grecque">
+								<figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+									<img src="./assets/images/menu-1.webp" width="100" height="100" loading="lazy" alt="Salade grecque composée de tomates, poivron vert, concombre, oignon, olives, feta"
+									class="img-cover">
+								</figure>
+								<div>
+									<div class="title-wrapper">
+										<h3 class="title-3">
+											<a href="#" class="card-title" aria-label="En savoir plus sur la salade grecque">Salade grecque</a>
+										</h3>
+										<span class="badge label-1">De saison</span>
+										<span class="span title-2" aria-label="Prix">25,50 €</span>
+									</div>
+									<p class="card-text label-1">
+										Tomates, poivron vert, concombre en tranches, oignon, olives et fromage feta.
+									</p>
+								</div>
+							</article>
+						</li>
 
-				<ul class="grid-list">
+						<!-- Lasagnes -->
+						<li>
+							<article class="menu-card hover:card" aria-label="Lasagnes">
 
-					<li>
-					<div class="menu-card hover:card">
+								<figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+									<img src="./assets/images/menu-2.webp" width="100" height="100" loading="lazy" alt="Lasagnes gratinées, légumes, viandes hachées et sauce tomate"
+									class="img-cover">
+								</figure>
+								<div>
+									<div class="title-wrapper">
+										<h3 class="title-3">
+											<a href="#" class="card-title" aria-label="En savoir plus sur les lasagnes">Lasagnes</a>
+										</h3>
+										<span class="span title-2" aria-label="Prix">40,00 €</span>
+									</div>
+									<p class="card-text label-1">
+										Légumes, fromages, viandes hachées, sauce tomate, assaisonnements et épices.
+									</p>
+								</div>
+							</article>
+						</li>
 
-						<figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-							<img src="./assets/images/menu-1.png" width="100" height="100" loading="lazy" alt="Image de salade grecque"
-							class="img-cover">
-						</figure>
+						<!-- Courge musquée -->
+						<li>
+							<article class="menu-card hover:card" aria-label="Courge musquée">
 
-						<div>
+								<figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+									<img src="./assets/images/menu-3.webp" width="100" height="100" loading="lazy" alt="Courge musquée rôtie, servie avec herbes fraîches et assaisonnement"
+									class="img-cover">
+								</figure>
+								<div>
+									<div class="title-wrapper">
+										<h3 class="title-3">
+											<a href="#" class="card-title" aria-label="En savoir plus sur la courge musquée">Courge musquée</a>
+										</h3>
+										<span class="span title-2" aria-label="Prix">10,00 €</span>
+									</div>
 
-							<div class="title-wrapper">
-							<h3 class="title-3">
-								<a href="#" class="card-title">Salade grecque</a>
-							</h3>
+									<p class="card-text label-1">
+										Faux texte d’impression utilisé dans l’industrie de la composition typographique.
+									</p>
+								</div>
+							</article>
+						</li>
 
-							<span class="badge label-1">De saison</span>
+						<!-- Tokusen Wagyu -->
+						<li>
+							<article class="menu-card hover:card" aria-label="Wokusen Wagyu">
 
-							<span class="span title-2">25,50 €</span>
-							</div>
+								<figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+									<img src="./assets/images/menu-4.webp" width="100" height="100" loading="lazy" alt="Viande Tokusen Wagyu grillée, légumes d'accompagnement"
+									class="img-cover">
+								</figure>
+								<div>
+									<div class="title-wrapper">
+										<h3 class="title-3">
+											<a href="#" class="card-title" aria-label="En savoir plus sur la wokusen wagyu">Tokusen Wagyu</a>
+										</h3>
+										<span class="badge label-1">Nouveau</span>
+										<span class="span title-2" aria-label="Prix">39,00 €</span>
+									</div>
 
-							<p class="card-text label-1">
-							Tomates, poivron vert, concombre en tranches, oignon, olives et fromage feta.
-							</p>
+									<p class="card-text label-1">
+										Légumes, fromages, viandes hachées, sauce tomate, assaisonnements et épices.
+									</p>
+								</div>
+							</article>
+						</li>
 
-						</div>
+						<!-- Olivas Rellenas -->
+						<li>
+							<article class="menu-card hover:card" aria-label="Olivas Rellenas">
 
-					</div>
-					</li>
+								<figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+									<img src="./assets/images/menu-5.webp" width="100" height="100" loading="lazy" alt="Olivas Rellenas farcies au crabe, poivrons rouges et verts"
+									class="img-cover">
+								</figure>
+								<div>
+									<div class="title-wrapper">
+										<h3 class="title-3">
+											<a href="#" class="card-title" aria-label="En savoir plus sur les olivas rellenas">Olivas Rellenas</a>
+										</h3>
 
-					<li>
-					<div class="menu-card hover:card">
+										<span class="span title-2" aria-label="Prix">25,00 €</span>
+									</div>
+									<p class="card-text label-1">
+										Avocats au crabe, oignon rouge, salade de crabe, poivrons rouges et verts farcis.
+									</p>
+								</div>
+							</article>
+						</li>
 
-						<figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-							<img src="./assets/images/menu-2.png" width="100" height="100" loading="lazy" alt="Image de lasagne"
-							class="img-cover">
-						</figure>
+						<!-- Poisson Opu -->
+						<li>
+							<article class="menu-card hover:card" aria-label="Poisson Opu">
 
-						<div>
+								<figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+									<img src="./assets/images/menu-6.webp" width="100" height="100" loading="lazy" alt="Poisson Opu servi avec légumes et sauce"
+									class="img-cover">
+								</figure>
 
-							<div class="title-wrapper">
-							<h3 class="title-3">
-								<a href="#" class="card-title">Lasagnes</a>
-							</h3>
+								<div>
+									<div class="title-wrapper">
+										<h3 class="title-3">
+											<a href="#" class="card-title" aria-label="En savoir plus sur le poisson Opu">Poisson Opu</a>
+										</h3>
+										<span class="span title-2" aria-label="Prix">49,00 €</span>
+									</div>
+									<p class="card-text label-1">
+										Légumes, fromages, viandes hachées, sauce tomate, assaisonnements et épices.
+									</p>
+								</div>
+							</article>
+						</li>
+					</ul>
 
-							<span class="span title-2">40,00 €</span>
-							</div>
+					<p class="menu-text text-center" aria-label="Horaires d'hiver">
+						En hiver, tous les jours de <span class="span">19h00</span> à <span class="span">21h00</span>
+					</p>
 
-							<p class="card-text label-1">
-							Légumes, fromages, viandes hachées, sauce tomate, assaisonnements et épices.
-							</p>
+					<a href="#menu" class="btn btn-primary" aria-label="Voir tout le menu">
+						<span class="text text-1">Voir tout le menu</span>
+						<span class="text text-2" aria-hidden="true">Voir tout le menu</span>
+					</a>
 
-						</div>
-
-					</div>
-					</li>
-
-					<li>
-					<div class="menu-card hover:card">
-
-						<figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-							<img src="./assets/images/menu-3.png" width="100" height="100" loading="lazy" alt="Image de courge musquée"
-							class="img-cover">
-						</figure>
-
-						<div>
-
-							<div class="title-wrapper">
-							<h3 class="title-3">
-								<a href="#" class="card-title">Courge musquée</a>
-							</h3>
-
-							<span class="span title-2">10,00 €</span>
-							</div>
-
-							<p class="card-text label-1">
-							Faux texte d’impression utilisé dans l’industrie de la composition typographique.
-							</p>
-
-						</div>
-
-					</div>
-					</li>
-
-					<li>
-					<div class="menu-card hover:card">
-
-						<figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-							<img src="./assets/images/menu-4.png" width="100" height="100" loading="lazy" alt="Image de tokusen wagyu"
-							class="img-cover">
-						</figure>
-
-						<div>
-
-							<div class="title-wrapper">
-							<h3 class="title-3">
-								<a href="#" class="card-title">Tokusen Wagyu</a>
-							</h3>
-
-							<span class="badge label-1">Nouveau</span>
-
-							<span class="span title-2">39,00 €</span>
-							</div>
-
-							<p class="card-text label-1">
-							Légumes, fromages, viandes hachées, sauce tomate, assaisonnements et épices.
-							</p>
-
-						</div>
-
-					</div>
-					</li>
-
-					<li>
-					<div class="menu-card hover:card">
-
-						<figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-							<img src="./assets/images/menu-5.png" width="100" height="100" loading="lazy" alt="Image de olivas rellenas"
-							class="img-cover">
-						</figure>
-
-						<div>
-
-							<div class="title-wrapper">
-							<h3 class="title-3">
-								<a href="#" class="card-title">Olivas Rellenas</a>
-							</h3>
-
-							<span class="span title-2">25,00 €</span>
-							</div>
-
-							<p class="card-text label-1">
-							Avocats au crabe, oignon rouge, salade de crabe, poivrons rouges et verts farcis.
-							</p>
-
-						</div>
-
-					</div>
-					</li>
-
-					<li>
-					<div class="menu-card hover:card">
-
-						<figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-							<img src="./assets/images/menu-6.png" width="100" height="100" loading="lazy" alt="Image de poisson Opu"
-							class="img-cover">
-						</figure>
-
-						<div>
-
-							<div class="title-wrapper">
-							<h3 class="title-3">
-								<a href="#" class="card-title">Poisson Opu</a>
-							</h3>
-
-							<span class="span title-2">49,00 €</span>
-							</div>
-
-							<p class="card-text label-1">
-							Légumes, fromages, viandes hachées, sauce tomate, assaisonnements et épices.
-							</p>
-
-						</div>
-
-					</div>
-					</li>
-
-				</ul>
-
-				<p class="menu-text text-center">
-					En hiver, tous les jours de <span class="span">19h00</span> à <span class="span">21h00</span>
-				</p>
-
-				<a href="#" class="btn btn-primary">
-					<span class="text text-1">Voir tout le menu</span>
-
-					<span class="text text-2" aria-hidden="true">Voir tout le menu</span>
-				</a>
-
-				<img src="./assets/images/shape-5.png" width="921" height="1036" loading="lazy" alt="forme"
-					class="shape shape-2 move-anim">
-				<img src="./assets/images/shape-6.png" width="343" height="345" loading="lazy" alt="forme"
-					class="shape shape-3 move-anim">
-
-			</div>
+					<!-- Images décoratives -->
+					<img src="./assets/images/shape-5.webp" width="921" height="1036" loading="lazy" alt="Image décoratives" aria-hidden="true"
+						class="shape shape-2 move-anim">
+					<img src="./assets/images/shape-6.webp" width="343" height="345" loading="lazy" alt="Image décorative" aria-hidden="true"
+						class="shape shape-3 move-anim">
+				</div>
 			</section>
+			<!-- Section Menu Fin -->
 
-			<!-- 
-			- #TESTIMONIALS
-			-->
+			<!-- Section Témoignages Début -->
 			<section class="section testi text-center has-bg-image"
-			style="background-image: url('./assets/images/testimonial-bg.jpg')" aria-label="témoignages">
-			<div class="container">
+			style="background-image: url('./assets/images/testimonial-bg.webp')" aria-labelledby="testi-title">
+				<div class="container">
 
-				<div class="quote">”</div>
+					<!-- Titre caché pour les lecteurs d'écran -->
+					<h2 id="testi-title" class="sr-only">Témoignage client</h2>
 
-				<p class="headline-2 testi-text">
-					Je voulais vous remercier de m’avoir invité à ce dîner incroyable l’autre soir. La nourriture était exceptionnelle.
-				</p>
+					<figure class="testimonial" aria-label="Témoignage de Sam Jhonson">
+						<blockquote>
+							<span class="quote" aria-hidden="true">”</span>
+							<p class="headline-2 testi-text">
+								Je voulais vous remercier de m’avoir invité à ce dîner incroyable l’autre soir. La nourriture était exceptionnelle.
+							</p>
+						</blockquote>
+						<figcaption class="profile" aria-label="Profil du client témoin">
+							<img src="./assets/images/testi-avatar.webp" width="100" height="100" loading="lazy" alt="Portrait de Sam Jhonson" class="img">
+							<p class="label-2 profile-name">Sam Jhonson</p>
+						</figcaption>
+					</figure>
 
-				<div class="wrapper">
-					<div class="separator"></div>
-					<div class="separator"></div>
-					<div class="separator"></div>
+					<!-- Séparateurs décoratifs, non lus -->
+					<div class="wrapper" aria-hidden="true">
+						<div class="separator"></div>
+						<div class="separator"></div>
+						<div class="separator"></div>
+					</div>
 				</div>
+			</section>
+			<!-- Section Témoignages Fin -->
 
-				<div class="profile">
-					<img src="./assets/images/testi-avatar.jpg" width="100" height="100" loading="lazy" alt="Photo de profil de Sam Jhonson"
-					class="img">
+			<!-- Section Réservation Début -->
+			<section class="reservation" aria-labelledby="reservation-title">
+				<div class="container">
+					<div class="form reservation-form bg-black-10">
 
-					<p class="label-2 profile-name">Sam Jhonson</p>
+						<form action="#" class="form-left" aria-labelledby="reservation-title">
+						<h2 class="headline-1 text-center" id="reservation-title">Réservation en ligne</h2>
+
+						<p class="form-text text-center">
+							Demande de réservation <a href="tel:+88123123456" class="link" aria-label="Appeler le restaurant pour réserver">+88-123-123456</a>
+							ou remplissez le formulaire ci-dessous
+						</p>
+
+						<!-- Groupe nom/téléphone -->
+						<div class="input-wrapper">
+							<div class="form-group">
+								<label for="reservation-name">Votre nom</label>
+								<input type="text" name="name" id="reservation-name" placeholder="Votre nom" autocomplete="off" class="input-field" required>
+							</div>
+							<div class="form-group">
+								<label for="reservation-phone">Numéro de téléphone</label>
+								<input type="tel" name="phone" id="reservation-phone" placeholder="Numéro de téléphone" autocomplete="off" class="input-field" required>
+							</div>
+						</div>
+
+						<!-- Groupe personne/date/heure -->
+						<div class="input-wrapper">
+
+							<!-- Nombre de personnes -->
+							<div class="form-group icon-wrapper">
+								<label for="reservation-person">Nombre de personnes</label>
+								<ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+								<select name="person" id="reservation-person" class="input-field" required>
+									<option value="" disabled selected hidden>Nombre de personnes</option>
+									<option value="1-person">1 personne</option>
+									<option value="2-person">2 personnes</option>
+									<option value="3-person">3 personnes</option>
+									<option value="4-person">4 personnes</option>
+									<option value="5-person">5 personnes</option>
+									<option value="6-person">6 personnes</option>
+									<option value="7-person">7 personnes</option>
+								</select>
+								<ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+							</div>
+
+							<!-- Date de réservation -->
+							<div class="form-group icon-wrapper">
+								<label for="reservation-date">Date</label>
+								<ion-icon name="calendar-clear-outline" aria-hidden="true"></ion-icon>
+								<input type="date" name="reservation-date" id="reservation-date" class="input-field" required>
+								<ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+							</div>
+
+							<!-- Heure de réservation -->
+							<div class="form-group icon-wrapper">
+								<label for="reservation-time">Heure</label>
+								<ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+								<select name="time" id="reservation-time" class="input-field" required>
+									<option value="" disabled selected hidden>Heures disponibles</option>
+									<option value="08:00am">08h00</option>
+									<option value="09:00am">09h00</option>
+									<option value="10:00am">10h00</option>
+									<option value="11:00am">11h00</option>
+									<option value="12:00am">12h00</option>
+									<option value="01:00pm">13h00</option>
+									<option value="02:00pm">14h00</option>
+									<option value="03:00pm">15h00</option>
+									<option value="04:00pm">16h00</option>
+									<option value="05:00pm">17h00</option>
+									<option value="06:00pm">18h00</option>
+									<option value="07:00pm">19h00</option>
+									<option value="08:00pm">20h00</option>
+									<option value="09:00pm">21h00</option>
+									<option value="10:00pm">22h00</option>
+								</select>
+								<ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+							</div>
+						</div>
+
+						<!-- Message -->
+						<div class="form-group">
+							<label for="reservation-message">Message</label>
+							<textarea name="message" id="reservation-message" placeholder="Message" autocomplete="off" class="input-field"></textarea>
+						</div>
+
+						<button type="submit" class="btn btn-secondary">
+							<span class="text text-1">Réserver une table</span>
+							<span class="text text-2" aria-hidden="true">Réserver une table</span>
+						</button>
+						</form>
+
+						<div class="form-right text-center" style="background-image: url('./assets/images/form-pattern.webp')" aria-labelledby="contact-title">
+							<h2 class="headline-1 text-center" id="contact-title">Contactez-nous</h2>
+
+							<p class="contact-label">Demande de réservation</p>
+							<a href="tel:+88123123456" class="body-1 contact-number hover-underline" aria-label="Appeler le restaurant pour réserver">+88-123-123456</a>
+							<div class="separator" aria-hidden="true"></div>
+
+							<p class="contact-label">Adresse</p>
+							<address class="body-4">
+								Rue du Restaurant, Cité Délicieuse, <br>
+								Londres 9578, Royaume-Uni
+							</address>
+
+							<p class="contact-label">Heures du déjeuner</p>
+							<p class="body-4">
+								Du lundi au dimanche <br>
+								11h00 - 14h30
+							</p>
+
+							<p class="contact-label">Heures du dîner</p>
+							<p class="body-4">
+								Du lundi au dimanche <br>
+								17h00 - 22h00
+							</p>
+						</div>
+					</div>
 				</div>
-
-			</div>
 			</section>
+			<!-- Section Réservation Fin -->
 
-			<!-- 
-			- #RESERVATION
-			-->
-			<section class="reservation">
-			<div class="container">
+			<!-- Section Avantanges Début -->
+			<section class="section features text-center" aria-labelledby="features-title">
+				<div class="container">
 
-				<div class="form reservation-form bg-black-10">
+					<p class="section-subtitle label-2" id="features-subtitle">Pourquoi nous choisir</p>
+					<h2 class="headline-1 section-title" id="features-title">Nos points forts</h2>
 
-					<form action="#" class="form-left">
-
-					<h2 class="headline-1 text-center">Réservation en ligne</h2>
-
-					<p class="form-text text-center">
-						Demande de réservation <a href="tel:+88123123456" class="link">+88-123-123456</a>
-						ou remplissez le formulaire ci-dessous
-					</p>
-
-					<div class="input-wrapper">
-						<input type="text" name="name" placeholder="Votre nom" autocomplete="off" class="input-field">
-
-						<input type="tel" name="phone" placeholder="Numéro de téléphone" autocomplete="off" class="input-field">
-					</div>
-
-					<div class="input-wrapper">
-
-						<div class="icon-wrapper">
-							<ion-icon name="person-outline" aria-hidden="true"></ion-icon>
-
-							<select name="person" class="input-field">
-							<option value="1-person">1 personne</option>
-							<option value="2-person">2 personnes</option>
-							<option value="3-person">3 personnes</option>
-							<option value="4-person">4 personnes</option>
-							<option value="5-person">5 personnes</option>
-							<option value="6-person">6 personnes</option>
-							<option value="7-person">7 personnes</option>
-							</select>
-
-							<ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+					<ul class="grid-list" aria-label="Liste des avantages du restaurant">
+						<!-- 1 -->
+						<li class="feature-item" aria-label="Nourriture hygiénique">
+						<div class="feature-card">
+							<div class="card-icon">
+								<img src="./assets/images/features-icon-1.webp" width="100" height="80" loading="lazy" alt="Icône d'ingrédients divers">
+							</div>
+							<h3 class="title-2 card-title">Nourriture hygiénique</h3>
+							<p class="label-1 card-text">Lorem Ipsum is simply dummy printing and typesetting.</p>
 						</div>
-
-						<div class="icon-wrapper">
-							<ion-icon name="calendar-clear-outline" aria-hidden="true"></ion-icon>
-
-							<input type="date" name="reservation-date" class="input-field">
-
-							<ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+						</li>
+						<!-- 2 -->
+						<li class="feature-item" aria-label="Environnement frais">
+						<div class="feature-card">
+							<div class="card-icon">
+								<img src="./assets/images/features-icon-2.webp" width="100" height="80" loading="lazy" alt="Icône de tables">
+							</div>
+							<h3 class="title-2 card-title">Environnement frais</h3>
+							<p class="label-1 card-text">Lorem Ipsum is simply dummy printing and typesetting.</p>
 						</div>
-
-						<div class="icon-wrapper">
-							<ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-							<select name="person" class="input-field">
-							<option value="08:00am">08h00</option>
-							<option value="09:00am">09h00</option>
-							<option value="010:00am">10h00</option>
-							<option value="011:00am">11h00</option>
-							<option value="012:00am">12h00</option>
-							<option value="01:00pm">13h00</option>
-							<option value="02:00pm">14h00</option>
-							<option value="03:00pm">15h00</option>
-							<option value="04:00pm">16h00</option>
-							<option value="05:00pm">17h00</option>
-							<option value="06:00pm">18h00</option>
-							<option value="07:00pm">19h00</option>
-							<option value="08:00pm">20h00</option>
-							<option value="09:00pm">21h00</option>
-							<option value="10:00pm">22h00</option>
-							</select>
-
-							<ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+						</li>
+						<!-- 3 -->
+						<li class="feature-item" aria-label="Chefs qualifiés">
+						<div class="feature-card">
+							<div class="card-icon">
+								<img src="./assets/images/features-icon-3.webp" width="100" height="80" loading="lazy" alt="Icône toque chef qualifié">
+							</div>
+							<h3 class="title-2 card-title">Chefs qualifiés</h3>
+							<p class="label-1 card-text">Lorem Ipsum is simply dummy printing and typesetting.</p>
 						</div>
+						</li>
+						<!-- 4 -->
+						<li class="feature-item" aria-label="Événements et fêtes">
+						<div class="feature-card">
+							<div class="card-icon">
+								<img src="./assets/images/features-icon-4.webp" width="100" height="80" loading="lazy" alt="Icône pétards événements et fêtes">
+							</div>
+							<h3 class="title-2 card-title">Événements & Fêtes</h3>
+							<p class="label-1 card-text">Lorem Ipsum is simply dummy printing and typesetting.</p>
+						</div>
+						</li>
+					</ul>
 
-					</div>
-
-					<textarea name="message" placeholder="Message" autocomplete="off" class="input-field"></textarea>
-
-					<button type="submit" class="btn btn-secondary">
-						<span class="text text-1">Réserver une table</span>
-
-						<span class="text text-2" aria-hidden="true">Réserver une table</span>
-					</button>
-
-					</form>
-
-					<div class="form-right text-center" style="background-image: url('./assets/images/form-pattern.png')">
-
-					<h2 class="headline-1 text-center">Contactez-nous</h2>
-
-					<p class="contact-label">Demande de réservation</p>
-
-					<a href="tel:+88123123456" class="body-1 contact-number hover-underline">+88-123-123456</a>
-
-					<div class="separator"></div>
-
-					<p class="contact-label">Adresse</p>
-
-					<address class="body-4">
-						Rue du Restaurant, Cité Délicieuse, <br>
-						Londres 9578, Royaume-Uni
-					</address>
-
-					<p class="contact-label">Heures du déjeuner</p>
-
-					<p class="body-4">
-						Du lundi au dimanche <br>
-						11h00 - 14h30
-					</p>
-
-					<p class="contact-label">Heures du dîner</p>
-
-					<p class="body-4">
-						Du lundi au dimanche <br>
-						17h00 - 22h00
-					</p>
-
-					</div>
-
+					<!-- Images décoratives -->
+					<img src="./assets/images/shape-7.webp" width="208" height="178" loading="lazy" alt="" aria-hidden="true" class="shape shape-1">
+					<img src="./assets/images/shape-8.webp" width="120" height="115" loading="lazy" alt="" aria-hidden="true" class="shape shape-2">
 				</div>
-
-			</div>
 			</section>
+			<!-- Section Avantages Fin -->
 
-			<!-- 
-			- #Avantanges
-			-->
-			<section class="section features text-center" aria-label="features">
-			<div class="container">
+			<!-- Section Événement Début -->
+			<section class="section event bg-black-10" aria-labelledby="event-title">
+				<div class="container">
 
-				<p class="section-subtitle label-2">Pourquoi nous choisir</p>
+					<p class="section-subtitle label-2 text-center" id="event-subtitle">Dernières actualités</p>
+					<h2 class="section-title headline-1 text-center" id="event-title">Événements à venir</h2>
 
-				<h2 class="headline-1 section-title">Nos points forts</h2>
+					<ul class="grid-list" aria-label="Liste des événements à venir">
+						<!-- Événement 1 -->
+						<li>
+						<article class="event-card has-before hover:shine" aria-label="Événement Nourriture, Saveur du 15/09/2022">
+							<div class="card-banner img-holder" style="--width: 350; --height: 450;">
+								<img src="./assets/images/event-1.webp" width="350" height="450" loading="lazy"
+								alt="Présentation de plat : 'Une saveur si bonne que vous voudrez manger avec les yeux.'" class="img-cover">
+								<time class="publish-date label-2" datetime="2022-09-15" aria-label="Le 15 septembre 2022">15/09/2022</time>
+							</div>
+							<div class="card-content">
+								<p class="card-subtitle label-2 text-center">Nourriture, Saveur</p>
+								<h3 class="card-title title-2 text-center">
+								Une saveur si bonne que vous voudrez manger avec les yeux.
+								</h3>
+							</div>
+						</article>
+						</li>
+						<!-- Événement 2 -->
+						<li>
+						<article class="event-card has-before hover:shine" aria-label="Événement Nourriture saine du 08/09/2022">
+							<div class="card-banner img-holder" style="--width: 350; --height: 450;">
+								<img src="./assets/images/event-2.webp" width="350" height="450" loading="lazy"
+								alt="Présentation de plat : 'Une saveur si bonne que vous voudrez manger avec les yeux.'" class="img-cover">
+								<time class="publish-date label-2" datetime="2022-09-08" aria-label="Le 8 septembre 2022">08/09/2022</time>
+							</div>
+							<div class="card-content">
+								<p class="card-subtitle label-2 text-center">Nourriture saine</p>
+								<h3 class="card-title title-2 text-center">
+								Une saveur si bonne que vous voudrez manger avec les yeux.
+								</h3>
+							</div>
+						</article>
+						</li>
+						<!-- Événement 3 -->
+						<li>
+						<article class="event-card has-before hover:shine" aria-label="Événement Recette du 03/09/2022">
+							<div class="card-banner img-holder" style="--width: 350; --height: 450;">
+								<img src="./assets/images/event-3.webp" width="350" height="450" loading="lazy"
+								alt="Présentation de plat : 'Une saveur si bonne que vous voudrez manger avec les yeux.'" class="img-cover">
+								<time class="publish-date label-2" datetime="2022-09-03" aria-label="Le 3 septembre 2022">03/09/2022</time>
+							</div>
+							<div class="card-content">
+								<p class="card-subtitle label-2 text-center">Recette</p>
+								<h3 class="card-title title-2 text-center">
+								Une saveur si bonne que vous voudrez manger avec les yeux.
+								</h3>
+							</div>
+						</article>
+						</li>
+					</ul>
 
-				<ul class="grid-list">
-
-					<li class="feature-item">
-					<div class="feature-card">
-
-						<div class="card-icon">
-							<img src="./assets/images/features-icon-1.png" width="100" height="80" loading="lazy" alt="icon">
-						</div>
-
-						<h3 class="title-2 card-title">Nourriture hygiénique</h3>
-
-						<p class="label-1 card-text">Lorem Ipsum is simply dummy printing and typesetting.</p>
-
-					</div>
-					</li>
-
-					<li class="feature-item">
-					<div class="feature-card">
-
-						<div class="card-icon">
-							<img src="./assets/images/features-icon-2.png" width="100" height="80" loading="lazy" alt="icon">
-						</div>
-
-						<h3 class="title-2 card-title">Environnement frais</h3>
-
-						<p class="label-1 card-text">Lorem Ipsum is simply dummy printing and typesetting.</p>
-
-					</div>
-					</li>
-
-					<li class="feature-item">
-					<div class="feature-card">
-
-						<div class="card-icon">
-							<img src="./assets/images/features-icon-3.png" width="100" height="80" loading="lazy" alt="icon">
-						</div>
-
-						<h3 class="title-2 card-title">Chefs qualifiés</h3>
-
-						<p class="label-1 card-text">Lorem Ipsum is simply dummy printing and typesetting.</p>
-
-					</div>
-					</li>
-
-					<li class="feature-item">
-					<div class="feature-card">
-
-						<div class="card-icon">
-							<img src="./assets/images/features-icon-4.png" width="100" height="80" loading="lazy" alt="icon">
-						</div>
-
-						<h3 class="title-2 card-title">Événements & Fêtes</h3>
-
-						<p class="label-1 card-text">Lorem Ipsum is simply dummy printing and typesetting.</p>
-
-					</div>
-					</li>
-
-				</ul>
-
-				<img src="./assets/images/shape-7.png" width="208" height="178" loading="lazy" alt="forme décorative"
-					class="shape shape-1">
-
-				<img src="./assets/images/shape-8.png" width="120" height="115" loading="lazy" alt="forme décorative"
-					class="shape shape-2">
-
-			</div>
+					<a href="#blog" class="btn btn-primary" aria-label="Voir notre blog">
+						<span class="text text-1">Voir notre blog</span>
+						<span class="text text-2" aria-hidden="true">Voir notre blog</span>
+					</a>
+				</div>
 			</section>
-
-			<!-- 
-			- #Événement
-			-->
-			<section class="section event bg-black-10" aria-label="event">
-			<div class="container">
-
-				<p class="section-subtitle label-2 text-center">Dernières actualités</p>
-
-				<h2 class="section-title headline-1 text-center">Événements à venir</h2>
-
-				<ul class="grid-list">
-
-					<li>
-					<div class="event-card has-before hover:shine">
-
-						<div class="card-banner img-holder" style="--width: 350; --height: 450;">
-							<img src="./assets/images/event-1.jpg" width="350" height="450" loading="lazy"
-							alt="Une saveur si bonne que vous voudrez manger avec les yeux." class="img-cover">
-
-							<time class="publish-date label-2" datetime="2022-09-15">15/09/2022</time>
-						</div>
-
-						<div class="card-content">
-							<p class="card-subtitle label-2 text-center">Nourriture, Saveur</p>
-
-							<h3 class="card-title title-2 text-center">
-							Une saveur si bonne que vous voudrez manger avec les yeux.
-							</h3>
-						</div>
-
-					</div>
-					</li>
-
-					<li>
-					<div class="event-card has-before hover:shine">
-
-						<div class="card-banner img-holder" style="--width: 350; --height: 450;">
-							<img src="./assets/images/event-2.jpg" width="350" height="450" loading="lazy"
-							alt="Une saveur si bonne que vous voudrez manger avec les yeux." class="img-cover">
-
-							<time class="publish-date label-2" datetime="2022-09-08">08/09/2022</time>
-						</div>
-
-						<div class="card-content">
-							<p class="card-subtitle label-2 text-center">Nourriture saine</p>
-
-							<h3 class="card-title title-2 text-center">
-							Une saveur si bonne que vous voudrez manger avec les yeux.
-							</h3>
-						</div>
-
-					</div>
-					</li>
-
-					<li>
-					<div class="event-card has-before hover:shine">
-
-						<div class="card-banner img-holder" style="--width: 350; --height: 450;">
-							<img src="./assets/images/event-3.jpg" width="350" height="450" loading="lazy"
-							alt="Une saveur si bonne que vous voudrez manger avec les yeux." class="img-cover">
-
-							<time class="publish-date label-2" datetime="2022-09-03">03/09/2022</time>
-						</div>
-
-						<div class="card-content">
-							<p class="card-subtitle label-2 text-center">Recette</p>
-
-							<h3 class="card-title title-2 text-center">
-							Une saveur si bonne que vous voudrez manger avec les yeux.
-							</h3>
-						</div>
-
-					</div>
-					</li>
-
-				</ul>
-
-				<a href="#" class="btn btn-primary">
-					<span class="text text-1">Voir notre blog</span>
-
-					<span class="text text-2" aria-hidden="true">Voir notre blog</span>
-				</a>
-
-			</div>
-			</section>
-
+			<!-- Section Événement Fin -->
 		</article>
 	</main>
+	<!-- Fin du main -->
 
-	<!-- 
-		- #Footer
-	-->
+	<!-- Footer Début -->
 	<footer class="footer section has-bg-image text-center"
-		style="background-image: url('./assets/images/footer-bg.jpg')">
+	style="background-image: url('./assets/images/footer-bg.webp')" aria-labelledby="footer-title">
 		<div class="container">
 
 			<div class="footer-top grid-list">
+				<div class="footer-brand has-before has-after">
+					<a href="#home" class="logo" aria-label="Accueil Grilli">
+						<img src="./assets/images/logo.svg" width="160" height="50" loading="lazy" alt="Logo Grilli Accueil">
+					</a>
 
-			<div class="footer-brand has-before has-after">
+					<address class="body-4" aria-label="Adresse du restaurant">
+						Rue du Restaurant, Cité Délicieuse, Londres 9578, Royaume-Uni
+					</address>
 
-				<a href="#" class="logo">
-					<img src="./assets/images/logo.svg" width="160" height="50" loading="lazy" alt="grilli accueil">
-				</a>
+					<a href="mailto:reservation@grilli.com" class="body-4 contact-link" aria-label="Envoyer un email à Grilli">reservation@grilli.com</a>
 
-				<address class="body-4">
-					Rue du Restaurant, Cité Délicieuse, Londres 9578, Royaume-Uni
-				</address>
+					<a href="tel:+88123123456" class="body-4 contact-link" aria-label="Appeler pour réserver une table">Demande de réservation : +88-123-123456</a>
 
-				<a href="mailto:reservation@grilli.com" class="body-4 contact-link">reservation@grilli.com</a>
+					<p class="body-4">
+						Ouvert : 09h00 - 13h00
+					</p>
 
-				<a href="tel:+88123123456" class="body-4 contact-link">Demande de réservation : +88-123-123456</a>
-
-				<p class="body-4">
-					Ouvert : 09h00 - 13h00
-				</p>
-
-				<div class="wrapper">
-					<div class="separator"></div>
-					<div class="separator"></div>
-					<div class="separator"></div>
-				</div>
-
-				<p class="title-1">Recevez nos actualités & offres</p>
-
-				<p class="label-1">
-					Abonnez-vous et obtenez <span class="span">-25%</span>
-				</p>
-
-				<form action="#" class="input-wrapper">
-					<div class="icon-wrapper">
-					<ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
-
-					<input type="email" name="email_address" placeholder="Votre email" autocomplete="off" class="input-field">
+					<div class="wrapper" aria-hidden="true">
+						<div class="separator"></div>
+						<div class="separator"></div>
+						<div class="separator"></div>
 					</div>
 
-					<button type="submit" class="btn btn-secondary">
-					<span class="text text-1">Subscribe</span>
+					<p class="title-1" id="footer-title">Recevez nos actualités & offres</p>
+					<p class="label-1">
+						Abonnez-vous et obtenez <span class="span">-25%</span>
+					</p>
 
-					<span class="text text-2" aria-hidden="true">S'abonner</span>
-					</button>
-				</form>
+					<form action="#" class="input-wrapper" aria-label="Abonnement à la newsletter">
+						<div class="form-group icon-wrapper">
+							<label for="footer-email" class="sr-only">Votre email</label>
+							<ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+							<input type="email" name="email_address" id="footer-email" placeholder="Votre email" autocomplete="off" class="input-field" required>
+						</div>
+						<button type="submit" class="btn btn-secondary" aria-label="S'abonner à la newsletter">
+							<span class="text text-1">S'abonner</span>
+							<span class="text text-2" aria-hidden="true">S'abonner</span>
+						</button>
+					</form>
+				</div>
 
-			</div>
+				<!-- Navigation principale pied de page -->
+				<ul class="footer-list" aria-label="Navigation principale pied de page">
+					<li><a href="#home" class="label-2 footer-link hover-underline" aria-label="Aller à l'accueil">Accueil</a></li>
+					<li><a href="#menu" class="label-2 footer-link hover-underline" aria-label="Voir les menus">Menus</a></li>
+					<li><a href="#about" class="label-2 footer-link hover-underline" aria-label="En savoir plus à propos">À propos</a></li>
+					<li><a href="#chefs" class="label-2 footer-link hover-underline" aria-label="Découvrir nos Chefs">Nos Chefs</a></li>
+					<li><a href="#reservation" class="label-2 footer-link hover-underline" aria-label="Nous contacter">Contact</a></li>
+				</ul>
 
-			<ul class="footer-list">
-
-				<li>
-					<a href="#" class="label-2 footer-link hover-underline">Accueil</a>
-				</li>
-
-				<li>
-					<a href="#" class="label-2 footer-link hover-underline">Menus</a>
-				</li>
-
-				<li>
-					<a href="#" class="label-2 footer-link hover-underline">À propos</a>
-				</li>
-
-				<li>
-					<a href="#" class="label-2 footer-link hover-underline">Nos Chefs</a>
-				</li>
-
-				<li>
-					<a href="#" class="label-2 footer-link hover-underline">Contact</a>
-				</li>
-
-			</ul>
-
-			<ul class="footer-list">
-
-				<li>
-					<a href="#" class="label-2 footer-link hover-underline">Facebook</a>
-				</li>
-
-				<li>
-					<a href="#" class="label-2 footer-link hover-underline">Instagram</a>
-				</li>
-
-				<li>
-					<a href="#" class="label-2 footer-link hover-underline">Twitter</a>
-				</li>
-
-				<li>
-					<a href="#" class="label-2 footer-link hover-underline">Youtube</a>
-				</li>
-
-				<li>
-					<a href="#" class="label-2 footer-link hover-underline">Google Map</a>
-				</li>
-
-			</ul>
-
+				<!-- Réseaux sociaux -->
+				<ul class="footer-list" aria-label="Réseaux sociaux">
+					<li><a href="#" class="label-2 footer-link hover-underline" aria-label="Facebook de Grilli">Facebook</a></li>
+					<li><a href="#" class="label-2 footer-link hover-underline" aria-label="Instagram de Grilli">Instagram</a></li>
+					<li><a href="#" class="label-2 footer-link hover-underline" aria-label="Twitter de Grilli">Twitter</a></li>
+					<li><a href="#" class="label-2 footer-link hover-underline" aria-label="Youtube de Grilli">Youtube</a></li>
+					<li><a href="#" class="label-2 footer-link hover-underline" aria-label="Voir l'emplacement sur Google Map">Google Map</a></li>
+				</ul>
 			</div>
 
 			<div class="footer-bottom">
-
-			<p class="copyright">
-				&copy; 2024 Grilli. Tous droits réservés | Crée par <a href="https://github.com/TristanDeschamp"
-					target="_blank" class="link">Tristan Deschamp</a>
-			</p>
-
+				<p class="copyright">
+					&copy; 2024 Grilli. Tous droits réservés | Créé par 
+					<a href="https://github.com/TristanDeschamp" target="_blank" class="link" rel="noopener noreferrer" aria-label="Profil GitHub de Tristan Deschamp">Tristan Deschamp</a>
+				</p>
 			</div>
-
 		</div>
 	</footer>
+
+	<!-- Footer Fin -->
 
 	<!-- 
 		- #BACK TO TOP
