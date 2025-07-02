@@ -8,17 +8,17 @@
    * COLORS
    */
 
-  --gold-crayola: hsl(38, 61%, 73%);
-  --quick-silver: hsla(0, 0%, 65%, 1);
+  --gold-crayola: #e4c590;
+  --quick-silver: #a6a6a6;
   --davys-grey: hsla(30, 3%, 34%, 1);
-  --smoky-black-1: hsla(40, 12%, 5%, 1);
+  --smoky-black-1: #0e0d0b;
   --smoky-black-2: hsla(30, 8%, 5%, 1);
-  --smoky-black-3: hsla(0, 3%, 7%, 1);
+  --smoky-black-3: #121111;
   --eerie-black-1: hsla(210, 4%, 9%, 1);
   --eerie-black-2: hsla(210, 4%, 11%, 1);
   --eerie-black-3: hsla(180, 2%, 8%, 1);
   --eerie-black-4: hsla(0, 0%, 13%, 1);
-  --white: hsla(0, 0%, 100%, 1);
+  --white: #ffffff;
   --white-alpha-20: hsla(0, 0%, 100%, 0.2);
   --white-alpha-10: hsla(0, 0%, 100%, 0.1);
   --black: hsla(0, 0%, 0%, 1);
@@ -1190,13 +1190,20 @@ textarea.input-field {
   # Section Evenement
 \*-----------------------------------*/
 
-.event .section-title { margin-block-end: 40px; }
-
-.event-card {
-  position: relative;
-  overflow: hidden;
+/* Définit la marge inférieure du titre de section "Événements" pour l'aérer par rapport au contenu suivant */
+.event .section-title { 
+  margin-block-end: 40px; 
 }
 
+/* Structure de la carte événement : bloc parent positionné en relatif pour placer les éléments enfants en absolu */
+.event-card {
+  position: relative;
+  overflow: hidden; /* Cache le débordement des enfants (utile pour l'effet zoom sur image) */
+}
+
+/* Contenu principal de la carte, posé en bas et sur toute la largeur de la carte
+  Fond avec un dégradé défini dans la variable CSS --gradient-1
+  Padding généreux pour mettre en valeur le texte sur l'image */
 .event-card .card-content {
   background-image: var(--gradient-1);
   position: absolute;
@@ -1205,6 +1212,9 @@ textarea.input-field {
   padding: 35px 35px 25px;
 }
 
+/* Date de publication de l'événement
+  Placée en haut à gauche de la carte, avec style "badge" : fond noir, texte doré
+  Petite taille, espacement, pour attirer l'œil sans être trop imposant */
 .event-card .publish-date {
   position: absolute;
   top: 30px;
@@ -1217,6 +1227,8 @@ textarea.input-field {
   line-height: 14px;
 }
 
+/* Sous-titre (ex : nom de l'événement)
+  Texte doré, majuscules, lettres espacées, épais, et légère marge en dessous pour séparer du contenu */
 .event-card .card-subtitle {
   color: var(--gold-crayola);
   text-transform: uppercase;
@@ -1225,10 +1237,18 @@ textarea.input-field {
   margin-block-end: 5px;
 }
 
-.event-card .card-banner .img-cover { transition: var(--transition-2); }
+/* Image principale de la carte : animée au survol ou focus (zoom léger pour donner un effet dynamique) */
+.event-card .card-banner .img-cover { 
+  transition: var(--transition-2); /* Transition douce définie par une variable CSS */
+}
 
-.event-card:is(:hover, :focus-within) .img-cover { transform: scale(1.05); }
+/* Effet au survol ou focus : zoom de 5% sur l'image */
+.event-card:is(:hover, :focus-within) .img-cover { 
+  transform: scale(1.05); 
+}
 
+/* Bouton dans la section événement
+  Centré horizontalement, avec une marge supérieure pour l'espacer du reste */
 .event .btn {
   margin-inline: auto;
   margin-block-start: 40px;
